@@ -20,7 +20,7 @@ fi
 cd $VERSIONNAME/$NAME-*/ || die "Could not change into $NAME directory."
 
 if [ ! -d VIRTUAL ]; then
-    virtualenv VIRTUAL
+    virtualenv -p ${PYTHON_BIN-/usr/bin/python} VIRTUAL
 fi
 
 $PIP install wheel
